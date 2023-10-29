@@ -12,6 +12,7 @@
     создания нового проекта или создать его с помощью
     IDE (например, IntelliJ IDEA или Eclipse).-->
     <dependencies>
+
         <!-- Другие зависимости -->
         <!--        AssertJ предоставляет множество методов для
         более сложных проверок,-->
@@ -21,14 +22,17 @@
             <version>3.21.0</version> <!-- Укажите актуальную версию AssertJ -->
             <scope>test</scope>
         </dependency>
-
-
         <dependency>
             <groupId>com.github.stefanbirkner</groupId>
             <artifactId>system-rules</artifactId>
             <version>1.19.0</version>
             <scope>test</scope>
         </dependency>
+
+        <!--        Да, для использования JUnit Jupiter (JUnit 5)
+        в ваших тестах в Java необходимо добавить соответствующую
+        зависимость в файл pom.xml. JUnit Jupiter - это фреймворк
+        для написания тестов в Java.-->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
