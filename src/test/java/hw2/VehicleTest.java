@@ -69,22 +69,16 @@ public class VehicleTest {
     }
 
     // Добавляем тесты на исключения
-    /**
-     * Эти тесты(negativeYearForCarThrowsException и negativeYearForMotorcycleThrowsException) проверяют,
-     * что конструкторы классов Car и Motorcycle выбрасывают исключение IllegalArgumentException
-     * при попытке создать объект с отрицательным годом выпуска. Для этого используется метод assertThrows, который
-     * ожидает генерации исключения указанного типа при выполнении лямбда-выражения. Такие тесты помогают обнаружить
-     * ошибки валидации данных и защитить программу от некорректного использования.
-     */
+
     @Test
     @DisplayName("Отрицательный год выпуска автомобиля вызывает исключение")
     public void negativeYearForCarThrowsException() {
-        assertThrows(IllegalArgumentException.class, () -> new Car("Toyota", "Camry", -2021));
+        assertThrows(IllegalArgumentException.class, () -> new Car("Toyota", "Crown", -2021));
     }
 
     @Test
     @DisplayName("Отрицательный год выпуска мотоцикла вызывает исключение")
     public void negativeYearForMotorcycleThrowsException() {
-        assertThrows(IllegalArgumentException.class, () -> new Motorcycle("Harley-Davidson", "Sportster", -2022));
+        assertThrows(IllegalArgumentException.class, () -> new Motorcycle("Harley-Davidson", "Cool", -2022));
     }
 }
