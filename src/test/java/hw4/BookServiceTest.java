@@ -25,7 +25,7 @@ public class BookServiceTest {
         @Test
         public void testFindBookById() {
             String id = "1";
-            Book book = new Book(id, "Mest Djedaya", "Yamov");
+            Book book = new Book(id, "Book1", "Aut1");
             // определение поведения заглушки bookRepository при вызове метода findById.
             when(bookRepository.findById(id)).thenReturn(book);
             // вызов метода findBookById объекта bookService и сохранение результата.
@@ -38,8 +38,8 @@ public class BookServiceTest {
 
         @Test
         public void testFindAllBook() {
-            Book book1 = new Book("1", "Mest Djedaya", "Yamov");
-            Book book2 = new Book("2", "Put voina", "Kolosov");
+            Book book1 = new Book("1", "Book1", "Aut1");
+            Book book2 = new Book("2", "Book2", "Aut2");
             // создание списка.
             List<Book> books = Arrays.asList(book1, book2);
             // определение поведения интерфейса bookRepository при вызове метода findAll.
