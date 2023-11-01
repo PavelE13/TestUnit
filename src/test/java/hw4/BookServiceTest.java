@@ -7,9 +7,11 @@ import org.junit.Before;
 import org.junit.jupiter.api.*;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 public class BookServiceTest {
+        //private MemBookRepository bookRepository;
         private BookRepository bookRepository;
         private BookService bookService;
 
@@ -25,7 +27,8 @@ public class BookServiceTest {
         @Test
         public void testFindBookById() {
             String id = "1";
-            Book book = new Book(id, "Book1", "Aut1");
+            Book book = new Book(id,"Book1", "Aut1");
+
             // определение поведения заглушки bookRepository при вызове метода findById.
             when(bookRepository.findById(id)).thenReturn(book);
             // вызов метода findBookById объекта bookService и сохранение результата.

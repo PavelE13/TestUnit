@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class MemBookRepository implements BookRepository{
-    private final Map <String, Book> books;
+public class MemBookRepository implements BookRepository {
+    private final Map<String, Book> books;
 
     public MemBookRepository() {
         this.books = new HashMap<>();
